@@ -116,11 +116,11 @@ arraylength = data.length
 i = 0
 
 # :first_in sets how long it takes before the job is first run. In this case, it is run immediately
-SCHEDULER.every '1s' do
+SCHEDULER.every '5s' do
 	amount = data[i]["result"]["count"]
 	eventdate = data[i]["result"]["_time"]  
 	send_event('activity', { current: amount, date: eventdate })
-	if i < (data.length)
+	if i < (data.length - 1)
 	   i = i + 1
         else
            i = 0
