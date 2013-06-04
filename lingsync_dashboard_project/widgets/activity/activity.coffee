@@ -1,0 +1,30 @@
+class Dashing.Activity extends Dashing.Widget
+  @accessor 'current', Dashing.AnimatedValue
+
+  @accessor 'difference', ->
+    if @get('last')
+      last = parseInt(@get('last'))
+      current = parseInt(@get('current'))
+      if last != 0
+        diff = Math.abs(Math.round((current - last) / last * 100))
+        "#{diff}%"
+    else
+      ""
+
+  @accessor 'arrow', ->
+    if @get('last')
+      if parseInt(@get('current')) > parseInt(@get('last')) then 'icon-arrow-up' else 'icon-arrow-down'
+
+  onData: (data) ->
+    if data.status
+      # clear existing "status-*" classes
+      $(@get('node')).attr 'class', (i,c) ->
+        c.replace /\bstatus-\S+/g, ''
+      # add new class
+      $(@get('node')).addClass "status-#{data.status}"
+
+  Batman.mixin Batman.Filters,
+  displayDate: (ad) ->
+    return undefined if typeof ad is 'undefined'
+    activityDate = new Date(ad)
+    return activityDate.toDateString()
