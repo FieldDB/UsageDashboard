@@ -1,36 +1,25 @@
 json = '[{
-  "name" : "M.E. Cathcart",
-  "affiliation" : "U Delaware"
+  "name" : "M.E."
 }, {
-  "name" : "Tobin Skinner",
-  "affiliation" : "iLanguage Lab Ltd, UQAM"
+  "name" : "Tobin"
 }, {
-  "name" : "Josh Horner",
-  "affiliation" : "iLanguage Lab Ltd"
+  "name" : "Josh"
 }, {
-  "name" : "Gina Cook",
-  "affiliation" : "iLanguage Lab Ltd"
+  "name" : "Gina"
 }, {
-  "name" : "Mathieu Legault",
-  "affiliation" : "iLanguage Lab Ltd"
+  "name" : "Mathieu"
 }, {
-  "name" : "Theresa Deering",
-  "affiliation" : "iLanguage Lab Ltd"
+  "name" : "Theresa"
 }, {
-  "name" : "Yuliya Manyakina",
-  "affiliation" : "Stony Brook University"
+  "name" : "Yuliya"
 }, {
-  "name" : "Elise McClay",
-  "affiliation" : "McGill University"
+  "name" : "Elise"
 }, {
-  "name" : "Hisako Noguchi",
-  "affiliation" : "Concordia University"
+  "name" : "Hisako"
 }, {
-  "name" : "Jesse Pollak",
-  "affiliation" : "Pomona College"
+  "name" : "Jesse"
 }, {
-  "name" : "Xianli Sun",
-  "affiliation" : "Miami University"
+  "name" : "Xianli"
 }]'
   
   people = JSON.parse json
@@ -38,5 +27,5 @@ json = '[{
 # :first_in sets how long it takes before the job is first run. In this case, it is run immediately
 SCHEDULER.every '3s', :first_in => 0 do |job|
 	current_cool_person = people[rand(people.length)]  
-	send_event('people_that_rock', { text: current_cool_person["name"], moreinfo: current_cool_person["affiliation"] })
+	send_event('people_that_rock', { text: current_cool_person["name"] })
 end
