@@ -1,7 +1,7 @@
 json = '[{"preview":false,"result":{"_time":"2013-02-02T00:00:00.000-0500","count":"13380"}},
 {"preview":false,"result":{"_time":"2013-02-03T00:00:00.000-0500","count":"2093"}},
 {"preview":false,"result":{"_time":"2013-02-04T00:00:00.000-0500","count":"3060"}},
-{"preview":false,"result":{"_time":"2013-02-05T00:00:00.000-0500","count":"1199"}},
+{"preview":false,"result":{"_time":"2013-02-05T00:00:00.000-0500","count":"3060"}},
 {"preview":false,"result":{"_time":"2013-02-06T00:00:00.000-0500","count":"414"}},
 {"preview":false,"result":{"_time":"2013-02-07T00:00:00.000-0500","count":"7311"}},
 {"preview":false,"result":{"_time":"2013-02-08T00:00:00.000-0500","count":"5593"}},
@@ -112,16 +112,18 @@ json = '[{"preview":false,"result":{"_time":"2013-02-02T00:00:00.000-0500","coun
 {"preview":false,"lastrow":true,"result":{"_time":"2013-05-24T00:00:00.000-0400","count":"36"}}]'
 
 data = JSON.parse json
-arraylength = data.length
 i = 0
 
 # :first_in sets how long it takes before the job is first run. In this case, it is run immediately
 SCHEDULER.every '5s' do
 	amount = data[i]["result"]["count"]
-	eventdate = data[i]["result"]["_time"]  
+	eventdate = data[i]["result"]["_time"]
+	if amount === data[i-1]["result"]["count"]
+  	   amount = Integer(amount) + 1
+	end
 	send_event('activity', { current: amount, date: eventdate })
 	if i < (data.length - 1)
-	   i = i + 1
+	   i += 1
         else
            i = 0
 	end
