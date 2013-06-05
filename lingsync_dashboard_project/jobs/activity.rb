@@ -118,9 +118,7 @@ i = 0
 SCHEDULER.every '5s' do
 	amount = data[i]["result"]["count"]
 	eventdate = data[i]["result"]["_time"]
-	if amount === data[i-1]["result"]["count"]
-  	   amount = Integer(amount) + 1
-	end
+	amount = Integer(amount)
 	send_event('activity', { current: amount, date: eventdate })
 	if i < (data.length - 1)
 	   i += 1
