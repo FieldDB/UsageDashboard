@@ -134,8 +134,8 @@ totalnumberofrecords = 0
 numberofrecordstodisplay = 7 #plus 1 = 10
 repos_issues = Array.new
 
-#Fetch data every 60 minutes; github appears to cache this info (daily?); NB: github API limits to 60 hits per hour
-SCHEDULER.every '60m', :first_in => 0 do |job|
+#Fetch data every 2 minutes
+SCHEDULER.every '2m', :first_in => 0 do |job|
   http = Net::HTTP.new("api.github.com", Net::HTTP.https_default_port())
   http.use_ssl = true
   responseopen = http.request(Net::HTTP::Get.new("/repos/OpenSourceFieldlinguistics/FieldDB/issues?state=open"))
@@ -166,7 +166,7 @@ SCHEDULER.every '60m', :first_in => 0 do |job|
 end # SCHEDULER
 
 #Cycle through data in DOM every 5s
-SCHEDULER.every '1s', :first_in => 0 do |job|
+SCHEDULER.every '2s', :first_in => 0 do |job|
   if repos_issues[0]
     send_event('fielddb_issues', { items: repos_issues[currentindex..currentindex+numberofrecordstodisplay] })
   else
