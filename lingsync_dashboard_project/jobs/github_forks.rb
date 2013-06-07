@@ -16,11 +16,11 @@ require 'json'
 # example for tracking an organisations repositories
 github_username = 'orgs/OpenSourceFieldlinguistics'
 # number of repositories to display in the list
-max_length = 5
+max_length = 1
 # order the list by the numbers
 ordered = true
 
-SCHEDULER.every '60m', :first_in => 0 do |job|
+SCHEDULER.every '12h', :first_in => 0 do |job|
   http = Net::HTTP.new("api.github.com", Net::HTTP.https_default_port())
   http.use_ssl = true
   response = http.request(Net::HTTP::Get.new("/#{github_username}/repos"))
