@@ -1,40 +1,28 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #9c4274;
-
+$background-color:  #dc5945;
 $title-color:       rgba(255, 255, 255, 0.7);
-$moreinfo-color:    rgba(255, 255, 255, 0.7);
 
 // ----------------------------------------------------------------------------
-// Widget-text styles
+// Widget-fielddbstats styles
 // ----------------------------------------------------------------------------
-.widget-text {
+.widget-fielddbstats {
 
   background-color: $background-color;
-
+  font-size: 30px;
+  
   .title {
     color: $title-color;
   }
-
-  .more-info {
-    color: $moreinfo-color;
-  }
-
-  .updated-at {
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-
-  &.large h3 {
-    font-size: 65px;
+  
+  .app_name {
+  	font-weight: 700;
+  	font-style: italic;
   }
   
-  h2 {
-  	font-size: 60px;
-  }
-  
-  .affiliation {
+  h3 {
   	font-size: 35px;
   }
+
 }
