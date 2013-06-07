@@ -1,0 +1,12 @@
+<h1 class="title" data-bind="title"></h1>
+
+<table>
+	<tr data-foreach-item="items">
+		<td class="issuenumber" data-bind="item.number" valign="top"></td>
+		<td class="titleofissue" data-bind="item.titleofissue" align="left"></td>
+		<td class="issuestatus" data-bind="item.status"></td>
+	</tr>
+</table>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
