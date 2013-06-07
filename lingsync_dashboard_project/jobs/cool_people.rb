@@ -1,30 +1,60 @@
-json = '[{
-  "name" : "M.E."
+json = '[ {
+"name" : "M.E."
 }, {
-  "name" : "Tobin"
+"name" : "Tobin"
 }, {
-  "name" : "Josh"
+"name" : "Josh"
 }, {
-  "name" : "Gina"
+"name" : "Gina"
 }, {
-  "name" : "Mathieu"
+"name" : "Mathieu"
 }, {
-  "name" : "Theresa"
+"name" : "Theresa"
 }, {
-  "name" : "Yuliya"
+"name" : "Yuliya"
 }, {
-  "name" : "Elise"
+"name" : "Elise"
 }, {
-  "name" : "Hisako"
+"name" : "Hisako"
 }, {
-  "name" : "Jesse"
+"name" : "Jesse"
 }, {
-  "name" : "Xianli"
+"name" : "Xianli"
 }, {
-  "name" : "Louisa"
+"name" : "Louisa"
 }, {
-  "name" : "Gretchen"
-}]'
+"name" : "Gretchen"
+}, {
+"name" : "Alan"
+}, {
+"name" : "Alexis"
+}, {
+"name" : "Robert"
+}, {
+"name" : "Brian"
+}, {
+"name" : "Carol"
+}, {
+"name" : "Paul"
+}, {
+"name" : "Pablo"
+}, {
+"name" : "Erin"
+}, {
+"name" : "Rakshit"
+}, {
+"name" : "Guy"
+}, {
+"name" : "Jessica"
+}, {
+"name" : "Joel"
+}, {
+"name" : "Andr&eacute;s"
+}, {
+"name" : "LingLlama"
+}, {
+"name" : "Oriana"
+} ]'
   
   people = JSON.parse json
 
