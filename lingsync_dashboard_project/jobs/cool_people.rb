@@ -20,6 +20,10 @@ json = '[{
   "name" : "Jesse"
 }, {
   "name" : "Xianli"
+}, {
+  "name" : "Louisa"
+}, {
+  "name" : "Gretchen"
 }]'
   
   people = JSON.parse json
