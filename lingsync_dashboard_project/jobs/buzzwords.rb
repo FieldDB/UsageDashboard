@@ -15,15 +15,7 @@ json = '[ {
 }, {
 "word" : "versioned"
 }, {
-"word" : "utterance"
-}, {
 "word" : "unicode"
-}, {
-"word" : "translation"
-}, {
-"word" : "tools"
-}, {
-"word" : "tipa"
 }, {
 "word" : "textgrids"
 }, {
@@ -37,31 +29,19 @@ json = '[ {
 }, {
 "word" : "standards-compliant"
 }, {
-"word" : "session"
-}, {
-"word" : "semantics"
-}, {
-"word" : "segmentation"
-}, {
 "word" : "searchable"
 }, {
 "word" : "scripts"
 }, {
-"word" : "revert"
+"word" : "undo"
 }, {
 "word" : "research"
 }, {
-"word" : "repository"
-}, {
 "word" : "public/private"
 }, {
-"word" : "prosodylab aligner"
-}, {
-"word" : "programmers"
+"word" : "prosodylab"
 }, {
 "word" : "praat"
-}, {
-"word" : "phonology"
 }, {
 "word" : "multiple orthographies"
 }, {
@@ -77,8 +57,6 @@ json = '[ {
 }, {
 "word" : "nosql"
 }, {
-"word" : "morphemes"
-}, {
 "word" : "modern"
 }, {
 "word" : "mobile"
@@ -93,25 +71,13 @@ json = '[ {
 }, {
 "word" : "longterm data archiving"
 }, {
-"word" : "linguists"
-}, {
-"word" : "lingsync"
-}, {
-"word" : "lexicon"
-}, {
-"word" : "lessons"
-}, {
 "word" : "leipzig glossing conventions"
 }, {
 "word" : "latex"
 }, {
 "word" : "language-learning module"
 }, {
-"word" : "laptops"
-}, {
 "word" : "javascript"
-}, {
-"word" : "json"
 }, {
 "word" : "iphone"
 }, {
@@ -119,23 +85,15 @@ json = '[ {
 }, {
 "word" : "ipa"
 }, {
-"word" : "internet"
-}, {
 "word" : "interns"
-}, {
-"word" : "information"
 }, {
 "word" : "import"
 }, {
 "word" : "images"
 }, {
-"word" : "ilanguage"
-}, {
 "word" : "hidden markov models"
 }, {
 "word" : "grammaticality judgements"
-}, {
-"word" : "gloss"
 }, {
 "word" : "github"
 }, {
@@ -149,29 +107,21 @@ json = '[ {
 }, {
 "word" : "emeld"
 }, {
-"word" : "elicitation session"
+"word" : "elicitation sessions"
 }, {
 "word" : "elan"
 }, {
 "word" : "discovery"
 }, {
-"word" : "dictionary"
-}, {
 "word" : "dialects"
 }, {
-"word" : "developers"
-}, {
-"word" : "datum"
+"word" : "software engineering"
 }, {
 "word" : "data"
 }, {
 "word" : "database"
 }, {
-"word" : "datalists"
-}, {
 "word" : "dataone"
-}, {
-"word" : "dashboard"
 }, {
 "word" : "customizable"
 }, {
@@ -181,25 +131,19 @@ json = '[ {
 }, {
 "word" : "corpus"
 }, {
-"word" : "consultant"
-}, {
 "word" : "community members"
 }, {
 "word" : "collaboration"
 }, {
 "word" : "chrome"
 }, {
-"word" : "browser"
-}, {
-"word" : "blog"
-}, {
 "word" : "automatic"
 }, {
-"word" : "attractive"
+"word" : "cute"
 }, {
 "word" : "audio"
 }, {
-"word" : "api"
+"word" : "restful api"
 }, {
 "word" : "annotation"
 }, {
